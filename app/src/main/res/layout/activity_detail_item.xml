@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:textColor="@color/black"
-                    android:text="@{viewModel.item.price}"
+                    android:text="@{viewModel.item.priceInString}"
                     tools:text="@string/price"/>
             </LinearLayout>
 

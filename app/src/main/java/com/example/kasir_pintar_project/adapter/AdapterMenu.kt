@@ -1,9 +1,11 @@
 package com.example.kasir_pintar_project.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.kasir_pintar_project.database.Item
 import com.example.kasir_pintar_project.databinding.ItemMenuBinding
 import com.example.kasir_pintar_project.model.ItemData
@@ -22,11 +24,14 @@ class AdapterMenu(private val context: Context) :
 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
         val item = items[position]
-        holder.binding.item = item
 
+        holder.binding.item = item
         holder.binding.cardItem.setOnClickListener {
             it.context?.openDetailActivity(ItemData(item))
         }
+        Glide.with(context).load(item.picture).into(holder.binding.imageItem)
+        Log.i("tesdulu", "${item.picture}")
+
     }
 
     override fun getItemCount() = items.size

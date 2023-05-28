@@ -8,7 +8,10 @@ data class Item(
     @PrimaryKey(autoGenerate = false)
     val id: String,
     val name: String?,
-    val price: String?,
+    val price: Int?,
     val stock: Int?,
     val info: String?,
-)
+    val picture: String?
+){
+    fun getPriceInString() ="Rp $price"
+}

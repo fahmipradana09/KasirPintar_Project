@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.kasir_pintar_project.R
 import com.example.kasir_pintar_project.database.ItemDatabase
 import com.example.kasir_pintar_project.database.ItemRepo
@@ -36,7 +37,11 @@ class DetailItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_detail_item)
 
-        viewModel.item = itemData
+        itemData?.let { itemData ->
+            viewModel.item = itemData
+            Glide.with(this).load(itemData.picture).into(binding.ivItemDetail)
+
+        }
         binding.viewModel = viewModel
     }
 }

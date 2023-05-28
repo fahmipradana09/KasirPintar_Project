@@ -9,13 +9,14 @@ import kotlinx.parcelize.Parcelize
 data class ItemData(
     val id: String = "",
     val name: String? = "",
-    val price: String? = "",
+    val price: Int? = 0,
     val stock: Int? = 0,
     val info: String? = "",
+    val picture: String? = ""
 ) : Parcelable {
-    constructor(item: Item) : this(item.id, item.name, item.price, item.stock, item.info)
+    constructor(item: Item) : this(item.id, item.name, item.price, item.stock, item.info,item.picture)
 
-    fun getStockInString() = stock?.orZero().toString()
-
-//    fun imageExists() = picture?.isNotBlank()
+    fun getStockInString() ="$stock item"
+    fun getPriceInString() ="Rp $price"
+    fun imageExists() = picture?.isNotBlank()
 }
