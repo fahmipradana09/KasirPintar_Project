@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Kasir_Pintar_Project</string>
+    <string name="nameItem">Burger Ayam Pedas</string>
+    <string name="nameCode">tcpr0044</string>
+    <string name="price">Rp 35.000</string>
+    <string name="tvCode">Kode</string>
+    <string name="colon">:</string>
+    <string name="tvPriceSell">Harga Jual</string>
+    <string name="tvStock">Stok</string>
+    <string name="tvStockDummy">10 Item</string>
+    <string name="tvKet">Keterangan</string>
+    <string name="tvInforman">burger enak rasanya dengan campuran daging pilihan yang fresh dan juicy.</string>
+    <string name="tvDesc">Burger enak rasanya dengan campuran daging pilihan yang resh dan juicy</string>
+    <string name="DaftarBarang">Daftar Barang</string>
+    <string name="detailBarang">Detail Barang</string>
+</resources>
